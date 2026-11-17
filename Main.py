@@ -60,7 +60,7 @@ def fetch_anime_info(anime_name: str) -> str:
         "Send me any anime name to get its airing status and next episode update!"
         )
         async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        anime_name = update.message.text.strip()
+            anime_name = update.message.text.strip()
         if not anime_name:
         return
         reply = fetch_anime_info(anime_name)
