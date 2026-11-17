@@ -36,7 +36,7 @@ def fetch_anime_info(anime_name: str) -> str:
     data = response.json()
     media = data.get("data", {}).get("Media")
     if not media:
-    return f"No anime found for '{anime_name}'."
+        return f"No anime found for '{anime_name}'."
     title = media["title"]["english"] or media["title"]["romaji"]
     status = media["status"]
     total_eps = media["episodes"] or "Unknown"
