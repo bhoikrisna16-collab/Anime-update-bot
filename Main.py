@@ -30,6 +30,7 @@ def fetch_anime_info(anime_name: str) -> str:
 try:    
 response = requests.post(
 ANILIST_URL,
+print(response.status_code, response.text)
 json={"query": QUERY, "variables": {"search": anime_name}},
 timeout=10,
 )
