@@ -66,10 +66,10 @@ def fetch_anime_info(anime_name: str) -> str:
         reply = fetch_anime_info(anime_name)
         await update.message.reply_text(reply, parse_mode="Markdown", disable_web_page_preview=True)
         def main() -> None:
-        application = Application.builder().token(TOKEN).build()
-        application.add_handler(CommandHandler("start", start))
-        application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-        application.run_polling()
-        if name == "main":
-        main()
+            application = Application.builder().token(TOKEN).build()
+            application.add_handler(CommandHandler("start", start))
+            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+            application.run_polling()
+            if name == "main":
+            main()
 
