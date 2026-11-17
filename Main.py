@@ -64,7 +64,7 @@ def fetch_anime_info(anime_name: str) -> str:
         if not anime_name:
             return
         reply = fetch_anime_info(anime_name)
-            await update.message.reply_text(reply, parse_mode="Markdown", disable_web_page_preview=True)
+                await update.message.reply_text(reply, parse_mode="Markdown", disable_web_page_preview=True)
         def main() -> None:
             application = Application.builder().token(TOKEN).build()
             application.add_handler(CommandHandler("start", start))
