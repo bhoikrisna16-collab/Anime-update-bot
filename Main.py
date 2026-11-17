@@ -56,7 +56,7 @@ def fetch_anime_info(anime_name: str) -> str:
         logging.error(f"Error fetching anime data: {e}")
         return "Failed to fetch anime updates. Please try again later."
         async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        await update.message.reply_text(
+            await update.message.reply_text(
         "Send me any anime name to get its airing status and next episode update!"
         )
         async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
