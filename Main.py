@@ -52,7 +52,7 @@ def fetch_anime_info(anime_name: str) -> str:
         msg += f"Next Episode ({ep_num}): in {days}d {hours}h {minutes}m\n"
         msg += f"More Info"
         return msg
-        except Exception as e:
+ except Exception as e:
         logging.error(f"Error fetching anime data: {e}")
         return "Failed to fetch anime updates. Please try again later."
         async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
