@@ -71,5 +71,5 @@ def fetch_anime_info(anime_name: str) -> str:
             application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
             application.run_polling()
             if name == "main":
-            main()
+                main()
 
