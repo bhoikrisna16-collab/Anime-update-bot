@@ -27,11 +27,7 @@ siteUrl
 }
 """
 def fetch_anime_info(anime_name: str) -> str:
-try:
-
-
-
-  
+try:    
 response = requests.post(
 ANILIST_URL,
 json={"query": QUERY, "variables": {"search": anime_name}},
